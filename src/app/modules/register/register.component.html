@@ -1,0 +1,88 @@
+<div
+  class="h-screen flex items-center justify-center"
+  style="
+    background: linear-gradient(
+        0.14deg,
+        rgba(255, 255, 255, 0.2) 19.87%,
+        rgba(12, 22, 24, 0.2) 100.94%
+      ),
+      #131c20;
+  "
+>
+  <div class="bg-transparent flex flex-col justify-center h-[600px] w-[580px]">
+    <div class="bg-transparent flex-col flex justify-center items-center gap-0">
+      <img src="../../assets/sightseer.png" width="85" alt="logo" />
+      <div class="italic text-orange-600 tracking-wide">SIGHT</div>
+      <div class="font-light text-white tracking-wider">S E E R</div>
+    </div>
+    <div
+      class="bg-transparent h-full w-full flex flex-col items-center gap-[50px]"
+    >
+      <img src="../../assets/globepic.png" alt="world map" class="w-full" />
+      <h2 class="text-white tracking-widest font-bold">REGISTER</h2>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-row items-center">
+            <app-mail-svg></app-mail-svg>
+            <input
+              type="text"
+              placeholder="email"
+              formControlName="email"
+              class="w-full bg-transparent border-b border-white text-white focus:outline-none pl-2"
+            />
+          </div>
+          <div class="flex flex-row items-center">
+            <app-user-svg></app-user-svg>
+            <input
+              type="text"
+              placeholder="username"
+              formControlName="username"
+              class="w-full bg-transparent border-b border-white text-white focus:outline-none pl-2"
+            />
+          </div>
+          <div class="flex flex-row items-center">
+            <app-lock-svg></app-lock-svg>
+            <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+              class="w-[300px] bg-transparent border-b border-white text-white focus:outline-none pl-2"
+            />
+          </div>
+          <div class="flex flex-row items-center">
+            <app-lock-svg></app-lock-svg>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              formControlName="confirmPass"
+              class="w-[300px] bg-transparent border-b border-white text-white focus:outline-none pl-2"
+            />
+          </div>
+          <div
+            *ngIf="registerForm.get('confirmPass')?.errors?.['passwordMismatch']"
+            class="text-red-500 text-xs"
+          >
+            Passwords do not match
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full bg-white text-black py-2 rounded shadow-lg"
+            >
+              REGISTER
+            </button>
+            <div class="mt-4 text-center text-white/70 text-sm">
+              already have an account?
+              <a
+                class="text-orange-600 cursor-pointer"
+                (click)="navigateToLogin()"
+                >LOG IN</a
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.world-map {
+  width: 100%;
+  height: auto;
+}
+
+.highLight {
+  fill: yellow;
+  stroke: red;
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(180deg, #0c1618 0%, #0d1010 100%);
+}
+
+.map path {
+  fill: #393d3d;
+  stroke: #000000;
+  stroke-width: 0.25;
+}
+
+.map path:hover {
+  fill: #ff5c00;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+#highLight {
+  fill: #ff5c00;
+  cursor: pointer;
+  stroke: orange;
+  stroke-width: 1.5;
+
+  box-shadow: 0px 4px 50px 50px #ff5e00;
+}

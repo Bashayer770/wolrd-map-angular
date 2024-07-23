@@ -1,0 +1,12 @@
+.bg-custom-gradient {
+  background: linear-gradient(180deg, #0c1618 0%, #0d1010 100%);
+}
+
+.bg-navbar {
+  background: linear-gradient(
+      0.14deg,
+      rgba(255, 255, 255, 0.2) 19.87%,
+      rgba(12, 22, 24, 0.2) 100.94%
+    ),
+    #131c20;
+}
